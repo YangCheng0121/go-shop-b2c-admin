@@ -1,0 +1,49 @@
+@import "~ant-design-vue/es/style/themes/default";
+
+.input-dropdown-wrap {
+  position: relative;
+
+  .input-disabled {
+    color: @btn-disable-color;
+    background: @btn-disable-bg;
+    border-color: @btn-disable-border;
+  }
+
+  .input-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: @select-dropdown-vertical-padding;
+    max-height: 321px;
+    overflow: hidden;
+    background: @select-dropdown-bg;
+    border-width: 1px;
+    border-style: solid;
+    border-color: @input-border-color;
+    border-radius: 4px;
+
+
+    .input-wrap {
+      width: 100%;
+      background: #fff;
+    }
+
+    .dropdown-ul {
+      overflow: auto;
+      max-height: 270px;
+      padding: 0;
+
+      .dropdown-li {
+        line-height: 30px;
+        font-size: @select-dropdown-font-size;
+
+        &:hover {
+          background: @select-item-active-bg;
+        }
+      }
+    }
+  }
+}
+
