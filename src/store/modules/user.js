@@ -15,7 +15,7 @@ const user = {
     Logout() {
       return new Promise(resolve => {
         clearUser()
-        Vue.$cookies.remove('login')
+        Vue.$cookies.remove('admin_login')
         resetRouter()
         resolve()
       })

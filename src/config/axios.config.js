@@ -6,8 +6,8 @@ if (isProd) {
   BASE_URL = '' // 生产地址
   IMAGE_PREFIX = '' // 生产地址
 } else {
-  BASE_URL = 'http://localhost:8888/api/admin'
-  IMAGE_PREFIX = 'http://localhost:8888'
+  BASE_URL = 'http://localhost:8080/api/admin'
+  IMAGE_PREFIX = 'http://localhost:8080'
 }
 
 export {
