@@ -191,9 +191,9 @@ export default {
                 roles
               }).then((res) => {
                 if (res.err_code === ERR_OK) {
-                  this.spinning = false
                   this.$router.back()
                 }
+                this.spinning = false
               })
             }
           })

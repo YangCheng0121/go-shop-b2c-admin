@@ -3,6 +3,7 @@ import qs from 'qs'
 import router from '@/router'
 import cookies from 'vue-cookies'
 import { BASE_URL } from '@/config/axios.config.js'
+import { Message } from 'ant-design-vue'
 
 export const ERR_ERROR = 0
 export const ERR_OK = 1
@@ -53,6 +54,10 @@ function creatAxios() {
     if (response.data.err_code === UNAUTHORIZED) {
       cookies.remove('admin_login')
       router.push('/user/login')
+      return response
+    }
+    if (response.data.err_code === ERR_ERROR) {
+      Message.error(response.data.data)
       return response
     }
     return response
